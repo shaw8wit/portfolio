@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/layout.dart';
+import 'package:portfolio/widgets/layout.dart';
 
 class Contact extends StatelessWidget {
   @override

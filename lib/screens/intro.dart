@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/layout.dart';
+import 'package:portfolio/widgets/layout.dart';
 
 class Intro extends StatelessWidget {
   @override
@@ -12,19 +12,25 @@ class Intro extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 400,
-                width: 400,
-                color: Colors.green,
-              ),
-              Spacer(),
-              Text(
-                  "data skdflkd ksdmflmsd\nsdjfkldsjfl\nsdjfkjsdfkjsdkjf\nsjdfhkjsdfkjdshfk"),
-              Spacer(),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 40),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 400,
+                  width: 400,
+                  child: Image.asset('assets/images/intro.png'),
+                ),
+                const SizedBox(width: 35),
+                Expanded(
+                  child: const Text(
+                    "I'm a Software Developer from India.\nI love puzzles and problem solving.\nA Competetive programmer from time to time.\nInterested in Flutter, Machine Learning, Web Development, Deep Learning and Software Development in general.\nLove Football, Anime and anything tech-related.",
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

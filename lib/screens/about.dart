@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:portfolio/screens/layout.dart';
+import 'package:portfolio/widgets/layout.dart';
 
 class About extends StatelessWidget {
   @override
@@ -10,7 +9,6 @@ class About extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            flex: 4,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,16 +25,11 @@ class About extends StatelessWidget {
               ],
             ),
           ),
-          Spacer(),
+          SizedBox(width: 40),
           Container(
+            height: 100,
+            width: 100,
             alignment: Alignment.centerRight,
-            color: Colors.red,
-            height: 350,
-            width: 350,
-            // child: SvgPicture.asset(
-            //   "assets/images/home.svg",
-            //   color: Colors.amber,
-            // ),
           ),
         ],
       ),

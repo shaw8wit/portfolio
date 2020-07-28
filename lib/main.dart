@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/home.dart';
+import 'package:portfolio/screens/splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,10 +14,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Quicksand'),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: Home.routeName,
-      routes: {
-        Home.routeName: (context) => Home(),
-      },
+      home: Splash(),
     );
   }
 }
