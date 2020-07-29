@@ -12,7 +12,7 @@ class Layout extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 65),
       alignment: Alignment.topCenter,
       child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 1100),
+        constraints: BoxConstraints(maxWidth: 1050),
         child: child,
       ),
     );

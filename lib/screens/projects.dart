@@ -5,8 +5,12 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Layout(
-      child: Container(
-        color: Colors.greenAccent,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text("Projects"),
+        ],
       ),
     );
   }

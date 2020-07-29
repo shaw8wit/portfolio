@@ -8,7 +8,7 @@ class Intro extends StatelessWidget {
       child: SizedBox.expand(
         child: Card(
           elevation: 8,
-          color: Colors.lightGreenAccent[100],
+          color: Colors.transparent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -25,8 +25,8 @@ class Intro extends StatelessWidget {
                 const SizedBox(width: 35),
                 Expanded(
                   child: const Text(
-                    "I'm a Software Developer from India.\nI love puzzles and problem solving.\nA Competetive programmer from time to time.\nInterested in Flutter, Machine Learning, Web Development, Deep Learning and Software Development in general.\nLove Football, Anime and anything tech-related.",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+                    "I'm a Software Developer from India.\nI love puzzles and problem solving.\nA Competetive programmer from time to time.\nInterested in Flutter, Machine Learning, Web Development, Deep Learning and Software Development in general.\nLove Football, Anime, working-out and anything related to tech.",
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
                   ),
                 ),
               ],
