@@ -11,7 +11,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 3,
+      seconds: 2,
       navigateAfterSeconds: Home(),
       title: const Text(
         'Welcome to Shouvit\'s portfolio',
@@ -19,10 +19,10 @@ class _SplashState extends State<Splash> {
       ),
       image: Image.network(
           'https://flutter.io/images/catalog-widget-placeholder.png'),
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xfffffff2),
       photoSize: 100.0,
       onClick: () {},
-      loaderColor: Colors.red,
+      loaderColor: Colors.greenAccent,
     );
   }
 }

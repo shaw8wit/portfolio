@@ -26,7 +26,8 @@ class Intro extends StatelessWidget {
                 Expanded(
                   child: const Text(
                     "I'm a Software Developer from India.\nI love puzzles and problem solving.\nA Competetive programmer from time to time.\nInterested in Flutter, Machine Learning, Web Development, Deep Learning and Software Development in general.\nLove Football, Anime, working-out and anything related to tech.",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: 20, height: 1.5),
                   ),
                 ),
               ],
