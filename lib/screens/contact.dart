@@ -10,9 +10,11 @@ class Contact extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text("Contact Me:"),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Text("Reach out to Me @", style: k.heading),
+          Wrap(
+            alignment: WrapAlignment.spaceAround,
+            runSpacing: 80,
+            spacing: 100,
             children: k.contactList,
           ),
         ],

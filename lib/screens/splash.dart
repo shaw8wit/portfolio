@@ -11,7 +11,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 2,
+      seconds: 1,
       navigateAfterSeconds: Home(),
       title: const Text(
         'Welcome to Shouvit\'s portfolio',

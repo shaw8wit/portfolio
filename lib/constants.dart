@@ -23,3 +23,6 @@ final List<Widget> contactList = [
     destination: 'tel:8250541130',
   ),
 ];
+
+final TextStyle heading = TextStyle(fontWeight: FontWeight.w600, fontSize: 30);
+final TextStyle appbar = TextStyle(fontWeight: FontWeight.w500, fontSize: 18);

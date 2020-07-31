@@ -25,10 +25,7 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           leading: Icon(Icons.skip_next),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20),
-            ),
+            borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
           actions: [
             HeadOption(title: 'About', f: () => _scrollToIndex(1)),
@@ -36,6 +33,16 @@ class Home extends StatelessWidget {
             HeadOption(title: 'Contact', f: () => _scrollToIndex(3)),
           ],
           toolbarHeight: 90,
+        ),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () => _scrollToIndex(0),
+          label: Row(
+            children: [
+              Icon(Icons.arrow_upward),
+              SizedBox(width: 10),
+              Text("Top"),
+            ],
+          ),
         ),
         body: PageView(
           scrollDirection: Axis.vertical,

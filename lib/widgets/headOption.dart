@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/constants.dart' as k;
 
 class HeadOption extends StatelessWidget {
   final Function f;
@@ -9,7 +10,7 @@ class HeadOption extends StatelessWidget {
     return GestureDetector(
       child: Padding(
         padding: const EdgeInsets.only(right: 30),
-        child: Center(child: Text(title)),
+        child: Center(child: Text(title, style: k.appbar)),
       ),
       onTap: f,
     );
