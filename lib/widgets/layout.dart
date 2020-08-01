@@ -8,9 +8,9 @@ class Layout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - 100,
       padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 65),
       alignment: Alignment.topCenter,
+      height: MediaQuery.of(context).size.height - 100,
       child: ConstrainedBox(
         constraints: BoxConstraints(maxWidth: 1050),
         child: child,

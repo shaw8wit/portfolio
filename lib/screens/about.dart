@@ -21,7 +21,7 @@ class About extends StatelessWidget {
                 SizedBox(height: 25),
                 Text(
                   "Currently in the final year of my Bachelors in Technology with major in Computer Science.",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
                 ),
               ],
             ),

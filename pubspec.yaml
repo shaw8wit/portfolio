@@ -35,3 +35,5 @@ flutter:
           weight: 700
         - asset: assets/fonts/Quicksand-Bold.ttf
           weight: 800
+        - asset: assets/fonts/Quicksand-Light.ttf
+          weight: 400

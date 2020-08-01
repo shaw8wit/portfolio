@@ -5,9 +5,17 @@ import 'package:portfolio/screens/contact.dart';
 import 'package:portfolio/screens/projects.dart';
 import 'package:portfolio/widgets/headOption.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   final List<Widget> pages = [About(), Intro(), Projects(), Contact()];
+
   final PageController pageController = PageController();
+
+  double _offset = 0;
 
   void _scrollToIndex(int index) {
     pageController.animateToPage(
@@ -16,6 +24,8 @@ class Home extends StatelessWidget {
       curve: Curves.fastLinearToSlowEaseIn,
     );
   }
+
+  double min(double a, double b) => a > b ? a : b;
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +54,60 @@ class Home extends StatelessWidget {
             ],
           ),
         ),
-        body: PageView(
-          scrollDirection: Axis.vertical,
-          pageSnapping: false,
-          controller: pageController,
-          children: List.generate(pages.length, (index) {
-            return pages[index];
-          }),
+        body: Stack(
+          children: [
+            Container(
+              child: PageView(
+                onPageChanged: (a) {
+                  print(a);
+                  setState(() {
+                    _offset =
+                        a * (MediaQuery.of(context).size.height - 100) / 4;
+                  });
+                },
+                scrollDirection: Axis.vertical,
+                pageSnapping: false,
+                controller: pageController,
+                children: List.generate(pages.length, (index) {
+                  return pages[index];
+                }),
+              ),
+            ),
+            Container(
+              alignment: Alignment.centerRight,
+              height: MediaQuery.of(context).size.height,
+              width: 20.0,
+              margin: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width - 20.0),
+              decoration: BoxDecoration(color: Colors.black12),
+              child: Container(
+                alignment: Alignment.topCenter,
+                child: GestureDetector(
+                  child: Container(
+                    height: 40.0,
+                    width: 15.0,
+                    margin:
+                        EdgeInsets.only(left: 5.0, right: 5.0, top: _offset),
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.all(Radius.circular(3.0))),
+                  ),
+                  onVerticalDragUpdate: (dragUpdate) {
+                    pageController.position.moveTo(
+                        min(0, dragUpdate.globalPosition.dy - 100) * 3.5);
+
+                    setState(() {
+                      if (dragUpdate.globalPosition.dy >= 0) {
+                        _offset = min(0, dragUpdate.globalPosition.dy - 100);
+                      }
+                      print(
+                          "View offset ${pageController.offset} scroll-bar offset $_offset");
+                    });
+                  },
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
