@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/model/github.dart';
 import 'package:portfolio/screens/home.dart';
 import 'package:splashscreen/splashscreen.dart';
+import 'package:provider/provider.dart';
 
 class Splash extends StatefulWidget {
   @override
@@ -8,6 +10,12 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    Provider.of<Github>(context, listen: false).loadProjects();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SplashScreen(

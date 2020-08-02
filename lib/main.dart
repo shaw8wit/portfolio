@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/model/github.dart';
 import 'package:portfolio/screens/splash.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(
+    ChangeNotifierProvider<Github>(
+      create: (context) => Github(),
+      child: MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   final Map<int, Color> color = {

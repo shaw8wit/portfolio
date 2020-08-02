@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:portfolio/screens/about.dart';
 import 'package:portfolio/screens/intro.dart';
 import 'package:portfolio/screens/contact.dart';
 import 'package:portfolio/screens/projects.dart';
 import 'package:portfolio/widgets/headOption.dart';
+import 'package:portfolio/model/github.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -45,6 +47,9 @@ class _HomeState extends State<Home> {
           toolbarHeight: 90,
         ),
         floatingActionButton: FloatingActionButton.extended(
+          tooltip: "Go to Top",
+          hoverColor: Theme.of(context).accentColor,
+          hoverElevation: 100,
           onPressed: () => _scrollToIndex(0),
           label: Row(
             children: [
@@ -59,7 +64,6 @@ class _HomeState extends State<Home> {
             Container(
               child: PageView(
                 onPageChanged: (a) {
-                  print(a);
                   setState(() {
                     _offset =
                         a * (MediaQuery.of(context).size.height - 100) / 4;
@@ -89,19 +93,17 @@ class _HomeState extends State<Home> {
                     margin:
                         EdgeInsets.only(left: 5.0, right: 5.0, top: _offset),
                     decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.all(Radius.circular(3.0))),
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                    ),
                   ),
                   onVerticalDragUpdate: (dragUpdate) {
                     pageController.position.moveTo(
                         min(0, dragUpdate.globalPosition.dy - 100) * 3.5);
-
                     setState(() {
                       if (dragUpdate.globalPosition.dy >= 0) {
                         _offset = min(0, dragUpdate.globalPosition.dy - 100);
                       }
-                      print(
-                          "View offset ${pageController.offset} scroll-bar offset $_offset");
                     });
                   },
                 ),
