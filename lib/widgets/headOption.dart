@@ -4,7 +4,9 @@ import 'package:portfolio/constants.dart' as k;
 class HeadOption extends StatelessWidget {
   final Function f;
   final String title;
+
   HeadOption({this.f, this.title});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

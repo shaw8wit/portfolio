@@ -80,9 +80,9 @@ class _HomeState extends State<Home> {
             Container(
               alignment: Alignment.centerRight,
               height: MediaQuery.of(context).size.height,
-              width: 20.0,
+              width: 15.0,
               margin: EdgeInsets.only(
-                  left: MediaQuery.of(context).size.width - 20.0),
+                  left: MediaQuery.of(context).size.width - 15.0),
               decoration: BoxDecoration(color: Colors.black12),
               child: Container(
                 alignment: Alignment.topCenter,
@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                     height: 40.0,
                     width: 15.0,
                     margin:
-                        EdgeInsets.only(left: 5.0, right: 5.0, top: _offset),
+                        EdgeInsets.only(left: 2.5, right: 2.5, top: _offset),
                     decoration: BoxDecoration(
                       color: Colors.grey,
                       borderRadius: BorderRadius.all(Radius.circular(3.0)),

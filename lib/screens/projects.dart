@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/item.dart';
 import 'package:portfolio/widgets/layout.dart';
 import 'package:portfolio/model/github.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +12,7 @@ class Projects extends StatelessWidget {
         builder: (context, git, _) {
           return ListView.builder(
             itemCount: git.l.length,
-            itemBuilder: (context, i) => Text(git.l[i].name),
+            itemBuilder: (context, i) => Item(git.l[i]),
           );
         },
       ),
