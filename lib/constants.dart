@@ -25,4 +25,6 @@ final List<Widget> contactList = [
 ];
 
 final TextStyle heading = TextStyle(fontWeight: FontWeight.w600, fontSize: 30);
-final TextStyle appbar = TextStyle(fontWeight: FontWeight.w400, fontSize: 16);
+final TextStyle appbar = TextStyle(fontWeight: FontWeight.w400, fontSize: 14);
+final TextStyle pTitle = TextStyle(fontWeight: FontWeight.w700, fontSize: 21);
+final TextStyle pBody = TextStyle(fontWeight: FontWeight.w500, fontSize: 18);

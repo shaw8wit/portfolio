@@ -10,7 +10,7 @@ class Intro extends StatelessWidget {
           elevation: 8,
           color: Colors.transparent,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 40),

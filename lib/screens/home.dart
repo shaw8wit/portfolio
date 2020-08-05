@@ -5,7 +5,6 @@ import 'package:portfolio/screens/intro.dart';
 import 'package:portfolio/screens/contact.dart';
 import 'package:portfolio/screens/projects.dart';
 import 'package:portfolio/widgets/headOption.dart';
-import 'package:portfolio/model/github.dart';
 
 class Home extends StatefulWidget {
   @override
