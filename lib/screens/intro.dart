@@ -17,12 +17,13 @@ class Intro extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  height: 400,
-                  width: 400,
-                  child: Image.asset('assets/images/intro.png'),
-                ),
-                const SizedBox(width: 35),
+                if (MediaQuery.of(context).size.aspectRatio > 1.45)
+                  Container(
+                    margin: EdgeInsets.only(right: 40),
+                    height: 400,
+                    width: 400,
+                    child: Image.asset('assets/images/intro.png'),
+                  ),
                 Expanded(
                   child: const Text(
                     "I'm a Software Developer from India.\nI love puzzles and problem solving.\nA Competetive programmer from time to time.\nInterested in Flutter, Machine Learning, Web Development, Deep Learning and Software Development in general.\nLove Football, Anime, working-out and anything related to tech.",

@@ -13,9 +13,12 @@ class ItemValue extends StatelessWidget {
       child: Transform.translate(
         offset: Offset(offset, 0),
         child: Center(
-          child: Text(
-            value,
-            style: flex == 2 ? k.pTitle : k.pBody,
+          child: Padding(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
+            child: Text(
+              value,
+              style: flex == 2 ? k.pTitle : k.pBody,
+            ),
           ),
         ),
       ),

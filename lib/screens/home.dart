@@ -5,6 +5,7 @@ import 'package:portfolio/screens/intro.dart';
 import 'package:portfolio/screens/contact.dart';
 import 'package:portfolio/screens/projects.dart';
 import 'package:portfolio/widgets/headOption.dart';
+import 'package:portfolio/constants.dart' as k;
 
 class Home extends StatefulWidget {
   @override
@@ -32,7 +33,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xfffffff2),
+        backgroundColor: const Color(0xfffcfcf0),
         appBar: AppBar(
           leading: Icon(Icons.skip_next),
           shape: RoundedRectangleBorder(
@@ -43,7 +44,8 @@ class _HomeState extends State<Home> {
             HeadOption(title: 'Projects', f: () => _scrollToIndex(2)),
             HeadOption(title: 'Contact', f: () => _scrollToIndex(3)),
           ],
-          toolbarHeight: 90,
+          toolbarHeight: k.aHeight,
+          toolbarOpacity: 0.8,
         ),
         floatingActionButton: FloatingActionButton.extended(
           tooltip: "Go to Top",
