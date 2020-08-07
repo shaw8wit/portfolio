@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shouvit Pradhan',
       theme: ThemeData(
-        primarySwatch: MaterialColor(0xffA5D040, color),
+        primarySwatch: MaterialColor(0xffadd55a, color),
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Quicksand'),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

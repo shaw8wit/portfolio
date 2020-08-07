@@ -22,8 +22,8 @@ class _HomeState extends State<Home> {
   void _scrollToIndex(int index) {
     pageController.animateToPage(
       index,
-      duration: Duration(milliseconds: 1500),
-      curve: Curves.fastLinearToSlowEaseIn,
+      duration: Duration(milliseconds: 1000),
+      curve: Curves.decelerate,
     );
   }
 
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xfffcfcf0),
+        backgroundColor: const Color(0xfff0f7de).withOpacity(0.6),
         appBar: AppBar(
           leading: Icon(Icons.skip_next),
           shape: RoundedRectangleBorder(
@@ -45,7 +45,6 @@ class _HomeState extends State<Home> {
             HeadOption(title: 'Contact', f: () => _scrollToIndex(3)),
           ],
           toolbarHeight: k.aHeight,
-          toolbarOpacity: 0.8,
         ),
         floatingActionButton: FloatingActionButton.extended(
           tooltip: "Go to Top",

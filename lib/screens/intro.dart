@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/layout.dart';
+import 'dart:math' as m;
 
 class Intro extends StatelessWidget {
   @override
@@ -8,7 +9,7 @@ class Intro extends StatelessWidget {
       child: SizedBox.expand(
         child: Card(
           elevation: 8,
-          color: Colors.transparent,
+          color: const Color(0xffffffeb),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -25,10 +26,14 @@ class Intro extends StatelessWidget {
                     child: Image.asset('assets/images/intro.png'),
                   ),
                 Expanded(
-                  child: const Text(
+                  child: Text(
                     "I'm a Software Developer from India.\nI love puzzles and problem solving.\nA Competetive programmer from time to time.\nInterested in Flutter, Machine Learning, Web Development, Deep Learning and Software Development in general.\nLove Football, Anime, working-out and anything related to tech.",
                     style: TextStyle(
-                        fontWeight: FontWeight.w600, fontSize: 20, height: 1.5),
+                      fontWeight: FontWeight.w600,
+                      fontSize:
+                          m.max(MediaQuery.of(context).size.width * 0.019, 17),
+                      height: 1.5,
+                    ),
                   ),
                 ),
               ],

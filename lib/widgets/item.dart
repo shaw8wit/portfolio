@@ -22,7 +22,7 @@ class Item extends StatelessWidget {
             borderRadius: BorderRadius.circular(32),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xfff0f0e2),
+                color: const Color(0xffeeeee0),
                 blurRadius: 5.0,
                 spreadRadius: 0.0,
                 offset: Offset(
@@ -31,7 +31,7 @@ class Item extends StatelessWidget {
                 ),
               ),
               BoxShadow(
-                color: const Color(0xfffffff4),
+                color: const Color(0xfffdfdf2),
                 blurRadius: 5.0,
                 spreadRadius: 0.0,
                 offset: Offset(
@@ -42,7 +42,7 @@ class Item extends StatelessWidget {
             ],
           ),
           child: Card(
-            color: const Color(0xfff7f7ea),
+            color: const Color(0xffffffeb),
             elevation: 0,
             borderOnForeground: false,
             shape:
