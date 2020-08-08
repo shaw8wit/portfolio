@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xfff0f7de).withOpacity(0.6),
+        backgroundColor: const Color(0xfffefeef),
         appBar: AppBar(
           leading: Icon(Icons.skip_next),
           shape: RoundedRectangleBorder(

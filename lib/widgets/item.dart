@@ -50,7 +50,11 @@ class Item extends StatelessWidget {
             child: Column(
               children: [
                 ItemValue(g.name, 32 * offset, 2),
-                ItemValue(g.description ?? "none", 64 * offset, 3),
+                ItemValue(
+                  g.description ?? "No Description yet!\nClick to learn more.",
+                  24 * offset,
+                  3,
+                ),
               ],
             ),
           ),

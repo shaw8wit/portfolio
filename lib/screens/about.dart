@@ -32,7 +32,7 @@ class Mobile extends StatelessWidget {
         Text(
           "Shouvit Pradhan",
           style: TextStyle(
-            fontSize: 0.06 * MediaQuery.of(context).size.width,
+            fontSize: 0.065 * MediaQuery.of(context).size.width,
             fontWeight: FontWeight.w800,
           ),
         ),
@@ -40,7 +40,7 @@ class Mobile extends StatelessWidget {
         Text(
           "Final year Bachelors in Technology student.\nComputer Science Major.",
           style: TextStyle(
-            fontSize: 0.03 * MediaQuery.of(context).size.width,
+            fontSize: 0.035 * MediaQuery.of(context).size.width,
             fontWeight: FontWeight.w600,
           ),
           textAlign: TextAlign.center,

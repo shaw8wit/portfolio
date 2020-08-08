@@ -27,6 +27,12 @@ final List<Widget> contactList = [
     title: 'Call',
     destination: 'tel:8250541130',
   ),
+  ReachTile(
+    icon: Icon(Icons.file_download, color: Colors.black),
+    title: 'Download CV',
+    destination:
+        'https://drive.google.com/uc?export=download&id=1nIMoKCuFkmHQuC31vdUqFEmMgSmFpqmf',
+  ),
 ];
 
 final TextStyle heading = TextStyle(fontWeight: FontWeight.w600, fontSize: 30);

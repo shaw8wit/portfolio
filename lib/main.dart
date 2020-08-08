@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/model/github.dart';
 import 'package:portfolio/screens/splash.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shouvit Pradhan',
