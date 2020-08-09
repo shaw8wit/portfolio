@@ -6,11 +6,11 @@ class Footer extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 65,
-      color: Color(0xff77bbff),
+      color: Color(0xff270b7f),
       child: Center(
         child: Text(
           "Copyright © Shouvit Pradhan",
-          style: TextStyle(fontWeight: FontWeight.w500),
+          style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
         ),
       ),
     );

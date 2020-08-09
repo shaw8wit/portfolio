@@ -19,7 +19,7 @@ final List<Widget> contactList = [
   ),
   ReachTile(
     icon: Image.asset('assets/images/hackerrank.png'),
-    title: 'LinkedIn',
+    title: 'Hackerrank',
     destination: 'https://www.hackerrank.com/shaw8wit',
   ),
   ReachTile(
