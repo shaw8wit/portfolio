@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart' as k;
+import 'dart:math';
 
 class ItemValue extends StatelessWidget {
   final double offset;
@@ -17,7 +18,13 @@ class ItemValue extends StatelessWidget {
             padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
             child: Text(
               value,
-              style: flex == 2 ? k.pTitle : k.pBody,
+              style: flex == 2
+                  ? k.pTitle
+                  : TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize:
+                          max(14, MediaQuery.of(context).size.aspectRatio * 10),
+                    ),
             ),
           ),
         ),
