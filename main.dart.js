@@ -44163,7 +44163,7 @@ $0:function(){},
 $S:0}
 N.xG.prototype={
 G:function(a){var s=null,r=F.b5(a,!1).a
-return M.cg(s,new T.f2(C.a1,s,s,L.fu("Copyright \xa9 Shouvit Pradhan",A.cX(s,s,s,s,s,s,s,s,s,s,s,s,s,C.aI,s,s,!0,s,s,s,s,s,s),s),s),new P.I(4286036991),s,s,s,65,s,s,s,r.a)}}
+return M.cg(s,new T.f2(C.a1,s,s,L.fu("Copyright \xa9 Shouvit Pradhan",A.cX(s,s,C.j,s,s,s,s,s,s,s,s,s,s,C.aI,s,s,!0,s,s,s,s,s,s),s),s),new P.I(4280748927),s,s,s,65,s,s,s,r.a)}}
 B.lD.prototype={
 G:function(a){var s=null
 return D.pv(s,new T.e4(C.uj,new T.f2(C.a1,s,s,L.fu(this.d,$.a5u(),s),s),s),C.ac,!1,s,s,s,s,s,s,s,s,s,s,this.c,s,s,s,s,s)}}
@@ -48765,8 +48765,7 @@ s($,"afD","a5x",function(){return new L.D8("Firefox",L.abT())})
 s($,"afN","a_A",function(){return new L.F6("Safari",L.abV())})
 s($,"afF","a5z",function(){return new L.DK("Internet Explorer",L.abU())})
 s($,"afW","a5I",function(){return new L.Ge("WKWebView",L.abW())})
-s($,"afz","a5w",function(){var r="LinkedIn"
-return H.b([U.qY("https://www.github.com/shaw8wit",U.pF("assets/images/github.png"),"Github"),U.qY("https://www.linkedin.com/in/shaw8wit",U.pF("assets/images/linkedin.png"),r),U.qY("mailto:shaw8wit@gmail.com?subject=Portfolio",L.xT(C.uE,C.k),"Email"),U.qY("https://www.hackerrank.com/shaw8wit",U.pF("assets/images/hackerrank.png"),r),U.qY("tel:8250541130",L.xT(C.uF,C.k),"Call"),U.qY("https://drive.google.com/uc?export=download&id=1nIMoKCuFkmHQuC31vdUqFEmMgSmFpqmf",L.xT(C.uG,C.k),"Download CV")],t.t)})
+s($,"afz","a5w",function(){return H.b([U.qY("https://www.github.com/shaw8wit",U.pF("assets/images/github.png"),"Github"),U.qY("https://www.linkedin.com/in/shaw8wit",U.pF("assets/images/linkedin.png"),"LinkedIn"),U.qY("mailto:shaw8wit@gmail.com?subject=Portfolio",L.xT(C.uE,C.k),"Email"),U.qY("https://www.hackerrank.com/shaw8wit",U.pF("assets/images/hackerrank.png"),"Hackerrank"),U.qY("tel:8250541130",L.xT(C.uF,C.k),"Call"),U.qY("https://drive.google.com/uc?export=download&id=1nIMoKCuFkmHQuC31vdUqFEmMgSmFpqmf",L.xT(C.uG,C.k),"Download CV")],t.t)})
 s($,"afE","a5y",function(){var r=null
 return A.cX(r,r,r,r,r,r,r,r,r,r,r,30,r,C.fR,r,r,!0,r,r,r,r,r,r)})
 s($,"afw","a5u",function(){var r=null
