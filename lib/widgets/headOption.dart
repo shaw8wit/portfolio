@@ -9,12 +9,13 @@ class HeadOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return FlatButton(
+      onPressed: f,
       child: Padding(
-        padding: const EdgeInsets.only(right: 30),
+        padding: EdgeInsets.symmetric(
+            vertical: 0, horizontal: 0.01 * MediaQuery.of(context).size.width),
         child: Center(child: Text(title, style: k.appbar)),
       ),
-      onTap: f,
     );
   }
 }

@@ -9,8 +9,9 @@ class Footer extends StatelessWidget {
       color: Color(0xff270b7f),
       child: Center(
         child: Text(
-          "Copyright © Shouvit Pradhan",
-          style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
+          "Made with 💚 using Flutter © Shouvit Pradhan",
+          style: TextStyle(
+              fontWeight: FontWeight.w500, color: Colors.white, fontSize: 14),
         ),
       ),
     );

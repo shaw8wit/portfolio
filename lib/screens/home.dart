@@ -35,17 +35,16 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: const Color(0xfffefeef),
         appBar: AppBar(
-          leading: Icon(Icons.skip_next),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
-          actions: [
-            HeadOption(title: 'About', f: () => _scrollToIndex(1)),
-            HeadOption(title: 'Projects', f: () => _scrollToIndex(2)),
-            HeadOption(title: 'Contact', f: () => _scrollToIndex(3)),
-          ],
-          toolbarHeight: k.aHeight,
-        ),
+            leading: Icon(Icons.skip_next),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            actions: [
+              HeadOption(title: 'About', f: () => _scrollToIndex(1)),
+              HeadOption(title: 'Projects', f: () => _scrollToIndex(2)),
+              HeadOption(title: 'Contact', f: () => _scrollToIndex(3)),
+            ],
+            toolbarHeight: MediaQuery.of(context).size.height * 0.12),
         floatingActionButton: FloatingActionButton.extended(
           tooltip: "Go to Top",
           hoverColor: Theme.of(context).accentColor,
@@ -65,8 +64,7 @@ class _HomeState extends State<Home> {
               child: PageView(
                 onPageChanged: (a) {
                   setState(() {
-                    _offset =
-                        a * (MediaQuery.of(context).size.height - 100) / 4;
+                    _offset = a * MediaQuery.of(context).size.height * 0.88 / 4;
                   });
                 },
                 scrollDirection: Axis.vertical,
@@ -93,16 +91,24 @@ class _HomeState extends State<Home> {
                     margin:
                         EdgeInsets.only(left: 2.5, right: 2.5, top: _offset),
                     decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                      color: Theme.of(context).accentColor.withOpacity(0.5),
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     ),
                   ),
                   onVerticalDragUpdate: (dragUpdate) {
-                    pageController.position.moveTo(
-                        min(0, dragUpdate.globalPosition.dy - 100) * 3.5);
+                    pageController.position.moveTo(min(
+                            0,
+                            dragUpdate.globalPosition.dy -
+                                MediaQuery.of(context).size.height * 0.12) *
+                        3.5);
                     setState(() {
                       if (dragUpdate.globalPosition.dy >= 0) {
-                        _offset = min(0, dragUpdate.globalPosition.dy - 100);
+                        _offset = min(
+                            0,
+                            dragUpdate.globalPosition.dy -
+                                1.2 *
+                                    MediaQuery.of(context).size.height *
+                                    0.12);
                       }
                     });
                   },

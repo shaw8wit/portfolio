@@ -19,21 +19,29 @@ class Item extends StatelessWidget {
         child: Container(
           margin: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
           decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xffefefdb),
+                Color(0xffffffeb),
+              ],
+            ),
             borderRadius: BorderRadius.circular(32),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xffeeeee0),
-                blurRadius: 5.0,
-                spreadRadius: 0.0,
+                color: const Color(0xfeeeeee0),
+                blurRadius: 8.0,
+                spreadRadius: 2.0,
                 offset: Offset(
                   5.0,
                   5.0,
                 ),
               ),
               BoxShadow(
-                color: const Color(0xfffdfdf2),
-                blurRadius: 5.0,
-                spreadRadius: 0.0,
+                color: const Color(0xfffffff4),
+                blurRadius: 8.0,
+                spreadRadius: 2.0,
                 offset: Offset(
                   -5.0,
                   -5.0,
@@ -42,7 +50,7 @@ class Item extends StatelessWidget {
             ],
           ),
           child: Card(
-            color: const Color(0xffffffeb),
+            color: Colors.transparent,
             elevation: 0,
             borderOnForeground: false,
             shape:

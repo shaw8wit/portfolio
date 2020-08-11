@@ -16,7 +16,7 @@ class _ProjectsState extends State<Projects> {
   @override
   void initState() {
     super.initState();
-    pageController = PageController(viewportFraction: 0.8);
+    pageController = PageController(viewportFraction: 0.7);
     pageController.addListener(() {
       setState(() {
         pageOffset = pageController.page;
@@ -32,7 +32,15 @@ class _ProjectsState extends State<Projects> {
 
   @override
   Widget build(BuildContext context) {
-    return Layout(
+    var m = MediaQuery.of(context).size;
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: m.aspectRatio < 0.8 ? 40 / m.aspectRatio : 0,
+        horizontal: 0,
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 5),
+      alignment: Alignment.topCenter,
+      height: MediaQuery.of(context).size.height * 0.88 - 200,
       child: Consumer<Github>(
         builder: (context, git, _) {
           return PageView(
@@ -48,7 +56,3 @@ class _ProjectsState extends State<Projects> {
     );
   }
 }
-// ListView.builder(
-//             itemCount: git.l.length,
-//             itemBuilder: (context, i) => Item(git.l[i]),
-//           )

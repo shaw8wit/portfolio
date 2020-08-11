@@ -19,8 +19,8 @@ class Contact extends StatelessWidget {
                   Text("Reach out to Me @", style: k.heading),
                   Wrap(
                     alignment: WrapAlignment.spaceAround,
-                    runSpacing: 80,
-                    spacing: 100,
+                    runSpacing: 50,
+                    spacing: 80,
                     children: k.contactList,
                   ),
                 ],
