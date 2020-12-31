@@ -1,8 +1,10 @@
 import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
-import 'package:portfolio/model/github.dart';
-import 'package:portfolio/widgets/itemValue.dart';
-import 'package:portfolio/widgets/reachTile.dart' as r;
+
+import '../model/github.dart';
+import 'itemValue.dart';
+import 'reachTile.dart' as r;
 
 class Item extends StatelessWidget {
   final GithubClass g;

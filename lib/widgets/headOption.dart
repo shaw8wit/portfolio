@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart' as k;
+
+import '../constants.dart' as k;
 
 class HeadOption extends StatelessWidget {
   final Function f;

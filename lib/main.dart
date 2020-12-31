@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/model/github.dart';
-import 'package:portfolio/screens/splash.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+
+import 'model/github.dart';
+import 'screens/splash.dart';
 
 void main() {
   runApp(

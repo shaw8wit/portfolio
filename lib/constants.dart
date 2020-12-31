@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/reachTile.dart';
+
+import 'widgets/reachTile.dart';
 
 final List<Widget> contactList = [
   ReachTile(

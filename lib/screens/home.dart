@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:portfolio/screens/about.dart';
-import 'package:portfolio/screens/intro.dart';
-import 'package:portfolio/screens/contact.dart';
-import 'package:portfolio/screens/projects.dart';
-import 'package:portfolio/widgets/headOption.dart';
-import 'package:portfolio/constants.dart' as k;
+
+import '../widgets/headOption.dart';
+import 'about.dart';
+import 'contact.dart';
+import 'intro.dart';
+import 'projects.dart';
 
 class Home extends StatefulWidget {
   @override
