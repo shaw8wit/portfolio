@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/model/github.dart';
-import 'package:portfolio/screens/home.dart';
-import 'package:splashscreen/splashscreen.dart';
 import 'package:provider/provider.dart';
+import 'package:splashscreen/splashscreen.dart';
+
+import '../model/github.dart';
+import 'home.dart';
 
 class Splash extends StatefulWidget {
   @override

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/item.dart';
-import 'package:portfolio/widgets/layout.dart';
-import 'package:portfolio/model/github.dart';
 import 'package:provider/provider.dart';
+
+import '../model/github.dart';
+import '../widgets/item.dart';
 
 class Projects extends StatefulWidget {
   @override

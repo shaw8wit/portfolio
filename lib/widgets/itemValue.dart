@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart' as k;
 import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+import '../constants.dart' as k;
 
 class ItemValue extends StatelessWidget {
   final double offset;

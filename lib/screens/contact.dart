@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/footer.dart';
-import 'package:portfolio/widgets/layout.dart';
-import 'package:portfolio/constants.dart' as k;
+
+import '../constants.dart' as k;
+import '../widgets/footer.dart';
+import '../widgets/layout.dart';
 
 class Contact extends StatelessWidget {
   @override

@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/layout.dart';
 import 'dart:math' as m;
+
+import 'package:flutter/material.dart';
+
+import '../widgets/layout.dart';
 
 class Intro extends StatelessWidget {
   @override

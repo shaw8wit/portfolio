@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/layout.dart';
+
+import '../widgets/layout.dart';
 
 class About extends StatelessWidget {
   @override
