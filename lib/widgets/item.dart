@@ -31,42 +31,29 @@ class Item extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(32),
             boxShadow: [
-              BoxShadow(
-                color: const Color(0xfeeeeee0),
+              const BoxShadow(
+                color: Color(0xffffffff),
                 blurRadius: 8.0,
                 spreadRadius: 2.0,
-                offset: Offset(
-                  5.0,
-                  5.0,
-                ),
+                offset: Offset(-6.0, -6.0),
               ),
-              BoxShadow(
-                color: const Color(0xfffffff4),
+              const BoxShadow(
+                color: Color(0xfddddddd),
                 blurRadius: 8.0,
                 spreadRadius: 2.0,
-                offset: Offset(
-                  -5.0,
-                  -5.0,
-                ),
+                offset: Offset(6.0, 6.0),
               ),
             ],
           ),
-          child: Card(
-            color: Colors.transparent,
-            elevation: 0,
-            borderOnForeground: false,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
-            child: Column(
-              children: [
-                ItemValue(g.name, 32 * offset, 2),
-                ItemValue(
-                  g.description ?? "No Description yet!\nClick to learn more.",
-                  24 * offset,
-                  3,
-                ),
-              ],
-            ),
+          child: Column(
+            children: [
+              ItemValue(g.name, 32 * offset, 2),
+              ItemValue(
+                g.description ?? "No Description yet!\nClick to learn more.",
+                24 * offset,
+                3,
+              ),
+            ],
           ),
         ),
       ),
