@@ -31,11 +31,11 @@ final List<Widget> contactList = [
   ReachTile(
     icon: Icon(Icons.file_download, color: Colors.black),
     title: 'Download CV',
-    destination:
-        'https://drive.google.com/uc?export=download&id=1nIMoKCuFkmHQuC31vdUqFEmMgSmFpqmf',
+    destination: 'https://drive.google.com/uc?export=download&id=1nIMoKCuFkmHQuC31vdUqFEmMgSmFpqmf',
   ),
 ];
 
 final TextStyle heading = TextStyle(fontWeight: FontWeight.w600, fontSize: 30);
 final TextStyle appbar = TextStyle(fontWeight: FontWeight.w500, fontSize: 15);
-final TextStyle pTitle = TextStyle(fontWeight: FontWeight.w700, fontSize: 22);
+final TextStyle pTitle = TextStyle(fontWeight: FontWeight.w700, fontSize: 24);
+final TextStyle pText = TextStyle(fontWeight: FontWeight.w500, fontSize: 18);

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 import '../constants.dart' as k;
@@ -17,16 +15,11 @@ class ItemValue extends StatelessWidget {
         offset: Offset(offset, 0),
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
+            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8),
             child: Text(
               value,
-              style: flex == 2
-                  ? k.pTitle
-                  : TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize:
-                          max(14, MediaQuery.of(context).size.aspectRatio * 10),
-                    ),
+              style: flex == 2 ? k.pTitle : k.pText,
+              textAlign: TextAlign.center,
             ),
           ),
         ),

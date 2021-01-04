@@ -16,7 +16,7 @@ class _ProjectsState extends State<Projects> {
   @override
   void initState() {
     super.initState();
-    pageController = PageController(viewportFraction: 0.75);
+    pageController = PageController(viewportFraction: 0.8);
     pageController.addListener(() {
       setState(() {
         pageOffset = pageController.page;
@@ -32,19 +32,16 @@ class _ProjectsState extends State<Projects> {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 55, horizontal: 0),
+      padding: EdgeInsets.symmetric(vertical: height * 0.1, horizontal: 0),
       alignment: Alignment.topCenter,
-      height: MediaQuery.of(context).size.height * 0.88 - 200,
+      height: height * 0.88 - 200,
       child: Consumer<Github>(
         builder: (context, git, _) {
           return PageView(
             controller: pageController,
-            children: git.l
-                .asMap()
-                .entries
-                .map((e) => Item(e.value, pageOffset - e.key))
-                .toList(),
+            children: git.l.asMap().entries.map((e) => Item(e.value, pageOffset - e.key)).toList(),
           );
         },
       ),

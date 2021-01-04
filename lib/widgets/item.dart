@@ -15,19 +15,16 @@ class Item extends StatelessWidget {
   Widget build(BuildContext context) {
     double gauss = math.exp(-(math.pow((offset.abs() - 0.5), 2) / 0.08));
     return Transform.translate(
-      offset: Offset(-48 * gauss * offset.sign, 0),
+      offset: Offset(-50 * gauss * offset.sign, 0),
       child: GestureDetector(
         onTap: () => r.launc(g.url),
         child: Container(
-          margin: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+          margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [
-                Color(0xffefefdb),
-                Color(0xffffffeb),
-              ],
+              colors: [Color(0xffefefdb), Color(0xffffffeb)],
             ),
             borderRadius: BorderRadius.circular(32),
             boxShadow: [
@@ -48,11 +45,9 @@ class Item extends StatelessWidget {
           child: Column(
             children: [
               ItemValue(g.name, 32 * offset, 2),
-              ItemValue(
-                g.description ?? "No Description yet!\nClick to learn more.",
-                24 * offset,
-                3,
-              ),
+              (MediaQuery.of(context).size.aspectRatio > 2.5
+                  ? SizedBox.shrink()
+                  : ItemValue(g.description ?? "No Description yet!\nClick to learn more.", 24 * offset, 3)),
             ],
           ),
         ),
